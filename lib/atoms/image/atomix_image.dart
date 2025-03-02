@@ -12,9 +12,10 @@ class AtomixImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       imageUrl: imageSrc,
+      fit: BoxFit.cover,
       height: height,
       width: width,
-      placeholder: (context, url) => CircularProgressIndicator(),
+      placeholder: (context, url) => Center(child: CircularProgressIndicator()),
       errorWidget: (context, url, error) => Icon(Icons.error),
     );
   }

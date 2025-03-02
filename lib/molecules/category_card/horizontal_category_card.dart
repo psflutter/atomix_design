@@ -20,13 +20,13 @@ class HorizontalCategoryCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(10.0),
       child: Container(
         color: Colors.white,
-        width: 180,
+        width: 170,
         child: Row(
           children: [
             AtomixImage(
               imageSrc: imageUrl,
-              height: 50.0,
-              width: 50.0,
+              //height: 50.0,
+              //width: 50.0,
             ),
             SizedBox(width: 16.0),
             Expanded(

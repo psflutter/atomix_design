@@ -25,14 +25,14 @@ class VerticalItemCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          color: Colors.white,
-          width: 180,
+          color: Colors.yellow,
+          //width: 180,
           child: Row(
             children: [
               AtomixImage(
                 imageSrc: imageUrl,
-                height: 50.0,
-                width: 50.0,
+                width: 80,
+                height: 90,
               ),
               SizedBox(width: 16.0),
               Expanded(
@@ -49,7 +49,6 @@ class VerticalItemCard extends StatelessWidget {
                       AtomixText(
                         text: description,
                         fontSize: 16.0,
-                        textType: AtomixTextType.bold,
                         maxLines: 2,
                       ),
                     ],

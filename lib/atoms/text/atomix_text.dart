@@ -27,10 +27,12 @@ class AtomixText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontSize: fontSize,
-        color: color,
-        // TODO fontWeight: _getFontWeight(),
-      ),
+          fontSize: fontSize,
+          color: color,
+          // TODO fontWeight: _getFontWeight(),
+          fontWeight: textType == AtomixTextType.bold
+              ? FontWeight.w700
+              : FontWeight.w400),
       textAlign: textAlign,
       maxLines: maxLines,
     );
