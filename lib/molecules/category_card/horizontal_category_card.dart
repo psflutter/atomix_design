@@ -16,21 +16,17 @@ class HorizontalCategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 180,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10.0),
       child: Container(
+        color: Colors.white,
+        width: 180,
         child: Row(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10.0),
-                bottomLeft: Radius.circular(10.0),
-              ),
-              child: AtomixImage(
-                imageSrc: imageUrl,
-                height: 50.0,
-                width: 50.0,
-              ),
+            AtomixImage(
+              imageSrc: imageUrl,
+              height: 50.0,
+              width: 50.0,
             ),
             SizedBox(width: 16.0),
             Expanded(
