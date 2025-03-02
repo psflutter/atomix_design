@@ -4,6 +4,7 @@ export 'package:atomix_design/theme/color/atomix_colors.dart';
 // Atoms
 export 'package:atomix_design/atoms/text/atomix_text.dart';
 export 'package:atomix_design/atoms/image/atomix_image.dart';
+export 'package:atomix_design/atoms/text_form/atomix_text_form.dart';
 
 // Molecules
 export 'package:atomix_design/molecules/atomix_loader_overlay_screen.dart';
