@@ -25,7 +25,7 @@ class VerticalItemCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          color: Colors.yellow,
+          color: Colors.white,
           //width: 180,
           child: Row(
             children: [

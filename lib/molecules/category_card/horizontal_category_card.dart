@@ -6,45 +6,50 @@ class HorizontalCategoryCard extends StatelessWidget {
   final String title;
   final String imageUrl;
   final String id;
+  final Function()? onTap;
 
   const HorizontalCategoryCard({
     Key? key,
     required this.title,
     required this.imageUrl,
     required this.id,
+    this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10.0),
-      child: Container(
-        color: Colors.white,
-        width: 170,
-        child: Row(
-          children: [
-            AtomixImage(
-              imageSrc: imageUrl,
-              //height: 50.0,
-              //width: 50.0,
-            ),
-            SizedBox(width: 16.0),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    AtomixText(
-                      text: title,
-                      fontSize: 16.0,
-                      textType: AtomixTextType.bold,
-                    ),
-                  ],
+    return GestureDetector(
+      onTap: onTap,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
+        child: Container(
+          color: Colors.white,
+          width: 170,
+          child: Row(
+            children: [
+              AtomixImage(
+                imageSrc: imageUrl,
+                //height: 50.0,
+                //width: 50.0,
+              ),
+              SizedBox(width: 16.0),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      AtomixText(
+                        text: title,
+                        fontSize: 16.0,
+                        textType: AtomixTextType.bold,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
