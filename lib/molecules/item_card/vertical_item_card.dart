@@ -29,10 +29,13 @@ class VerticalItemCard extends StatelessWidget {
           //width: 180,
           child: Row(
             children: [
-              AtomixImage(
-                imageSrc: imageUrl,
-                width: 80,
-                height: 90,
+              Hero(
+                tag: id,
+                child: AtomixImage(
+                  imageSrc: imageUrl,
+                  width: 80,
+                  height: 90,
+                ),
               ),
               SizedBox(width: 16.0),
               Expanded(
